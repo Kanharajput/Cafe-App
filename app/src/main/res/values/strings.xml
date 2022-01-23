@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SpecificKeyboard</string>
+    <string name="intro_text">Dessert</string>
+    <string name="about_donut">Donuts are glazed and sprinkled with candy.</string>
+    <string name="about_icecream">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+    <string name="about_froyo">FroYo is premium self-serve frozen yogurt.</string>
+
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="your_ordered_text">Your Ordered</string>
+    <string name="second_activity">Payment Details</string>
+    <string name="name_label_text">Name</string>
+    <string name="hint_in_edittext">Enter your name</string>
+    <string name="adress_label">Address</string>
+    <string name="adress_hint">Enter your address</string>
+    <string name="phone_label">Phone</string>
+    <string name="phone_hint">Enter phone number</string>
+    <string name="note_label_text">Note</string>
+    <string name="note_hint">Enter note</string>
+    <string name="delivery_label">Choose Delivery option :</string>
+    <string name="same_day_message">Same day messager service</string>
+    <string name="next_day_message">Next day ground delivery</string>
+    <string name="pickUP_message">Pick UP</string>
+</resources>

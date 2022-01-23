@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize">17sp</dimen>
+    <dimen name="margin_btw_views">30dp</dimen>
+    <dimen name="margin90dp">90dp</dimen>
+</resources>
