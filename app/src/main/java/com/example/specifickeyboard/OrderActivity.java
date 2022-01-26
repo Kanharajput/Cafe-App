@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -16,6 +17,9 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        // set an exit transition
+        getWindow().setEnterTransition(new Explode());
 
         // reference txt_show_order_item
         txt_show_ordered_item = findViewById(R.id.txtvShowingOrder);

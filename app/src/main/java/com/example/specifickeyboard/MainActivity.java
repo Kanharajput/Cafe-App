@@ -2,8 +2,10 @@ package com.example.specifickeyboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // set an exit transition
+        getWindow().setExitTransition(new Explode());
     }
 
     public void donutSelected(View view) {
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void fabClicked(View view) {
         Intent intent = new Intent(this,OrderActivity.class);
         intent.putExtra(ExtraFromMain,item_selected);
-        startActivity(intent);
+        startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 }
