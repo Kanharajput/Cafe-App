@@ -13,11 +13,11 @@
         <item name="android:textSize">48sp</item>
     </style>
     <style name="SpecificKeyboard.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
-        <item name="fontFamily">@font/neuton_bold</item>
+        <item name="fontFamily">@font/lobster_regular</item>
         <item name="android:textSize">34sp</item>
     </style>
     <style name="SpecificKeyboard.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="fontFamily">@font/roboto_italic</item>
         <item name="android:textSize">24sp</item>
     </style>
     <style name="SpecificKeyboard.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
@@ -25,7 +25,7 @@
         <item name="android:textSize">20sp</item>
     </style>
     <style name="SpecificKeyboard.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="fontFamily">@font/lobster_regular</item>
+        <item name="fontFamily">@font/neuton_regular</item>
         <item name="android:textSize">16sp</item>
     </style>
     <style name="SpecificKeyboard.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
@@ -41,11 +41,11 @@
         <item name="android:textSize">17sp</item>
     </style>
     <style name="SpecificKeyboard.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/lobster_regular</item>
+        <item name="fontFamily">@font/neuton_italic</item>
         <item name="android:textSize">17sp</item>
     </style>
     <style name="SpecificKeyboard.Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/lobster_regular</item>
+        <item name="fontFamily">@font/roboto_italic</item>
         <item name="android:textSize">15sp</item>
     </style>
     <style name="SpecificKeyboard.Overline" parent="TextAppearance.MaterialComponents.Overline">
