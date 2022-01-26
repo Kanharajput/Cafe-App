@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_order_scene"
     tools:context=".OrderActivity">
 
     <TextView
@@ -87,12 +88,12 @@
         android:id="@+id/note_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_btw_views"
+        android:layout_marginTop="@dimen/margin_btw_views"
         android:text="@string/note_label_text"
         android:textSize="@dimen/textsize"
-        android:layout_marginTop="@dimen/margin_btw_views"
-        android:layout_marginStart="@dimen/margin_btw_views"
-        app:layout_constraintTop_toBottomOf="@id/phone_label"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_label" />
 
     <EditText
         android:id="@+id/note_text"
@@ -101,8 +102,8 @@
         android:layout_marginStart="@dimen/margin_btw_views"
         android:ems="10"
         android:hint="@string/note_hint"
-        android:textAppearance="@style/SpecificKeyboard.Caption"
         android:inputType="textMultiLine|textCapSentences"
+        android:textAppearance="@style/SpecificKeyboard.Caption"
         app:layout_constraintBaseline_toBaselineOf="@id/note_label"
         app:layout_constraintStart_toEndOf="@id/note_label" />
 
@@ -110,10 +111,10 @@
         android:id="@+id/delivery_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_btw_views"
+        android:layout_marginTop="@dimen/margin_btw_views"
         android:text="@string/delivery_label"
         android:textAppearance="@style/SpecificKeyboard.Headline4"
-        android:layout_marginTop="@dimen/margin_btw_views"
-        android:layout_marginStart="@dimen/margin_btw_views"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/note_label" />
 
@@ -121,43 +122,43 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin_btw_views"
         android:layout_marginStart="@dimen/margin_btw_views"
+        android:layout_marginTop="@dimen/margin_btw_views"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/delivery_label" >
+        app:layout_constraintTop_toBottomOf="@id/delivery_label">
 
         <RadioButton
             android:id="@+id/sameday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/same_day_message"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonClicked"
+            android:text="@string/same_day_message" />
 
         <RadioButton
             android:id="@+id/nextday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next_day_message"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonClicked"
+            android:text="@string/next_day_message" />
 
         <RadioButton
             android:id="@+id/pickup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickUP_message"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonClicked"
+            android:text="@string/pickUP_message" />
     </RadioGroup>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Button"
         android:textAppearance="@style/SpecificKeyboard.Headline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

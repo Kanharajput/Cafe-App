@@ -19,8 +19,5 @@
         <!-- Customized attributes -->
         <item name="shapeAppearanceSmallComponent">@style/SpecificKeyboard.SmallComponent</item>
 
-
-
-
     </style>
 </resources>
