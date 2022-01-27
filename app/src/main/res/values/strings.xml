@@ -15,11 +15,19 @@
     <string name="adress_label">Address</string>
     <string name="adress_hint">Enter your address</string>
     <string name="phone_label">Phone</string>
-    <string name="phone_hint">Enter phone number</string>
+    <string name="phone_hint">Phone number</string>
     <string name="note_label_text">Note</string>
     <string name="note_hint">Enter note</string>
     <string name="delivery_label">Choose Delivery option :</string>
     <string name="same_day_message">Same day messager service</string>
     <string name="next_day_message">Next day ground delivery</string>
     <string name="pickUP_message">Pick UP</string>
+
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

@@ -77,17 +77,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adress_text" />
 
+
     <EditText
         android:id="@+id/phone_text"
-        android:layout_width="wrap_content"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="140dp"
         android:ems="10"
         android:hint="@string/phone_hint"
         android:inputType="phone"
         android:textAppearance="@style/SpecificKeyboard.Caption"
         app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/phone_text"
+        app:layout_constraintStart_toEndOf="@id/phone_label"
+        app:layout_constraintTop_toBottomOf="@id/adress_text" />
 
     <TextView
         android:id="@+id/note_label"
@@ -146,8 +158,8 @@
             android:id="@+id/nextday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="radioButtonClicked"
             android:checked="true"
+            android:onClick="radioButtonClicked"
             android:text="@string/next_day_message"
             android:textAppearance="@style/SpecificKeyboard.Subtitle2" />
 
