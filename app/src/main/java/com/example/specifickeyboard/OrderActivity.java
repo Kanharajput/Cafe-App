@@ -3,11 +3,15 @@ package com.example.specifickeyboard;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.transition.Explode;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -15,6 +19,7 @@ import android.widget.Toast;
 
 public class OrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private TextView txt_show_ordered_item;
+    private EditText edtPhoneText;
     private int check = 0;
 
     @Override
@@ -50,6 +55,34 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
         Intent intent = getIntent();
         String orered_item = intent.getStringExtra(MainActivity.ExtraFromMain);
         txt_show_ordered_item.setText(orered_item);
+
+        //reference the editText to the phone label
+        edtPhoneText = findViewById(R.id.phone_text);
+
+        // setting onclickListner for the enter button in device inbuilt keyboard
+        edtPhoneText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_SEND) {
+                    dialNumber();
+                    return true;             //  return true if action handled
+                }
+                return false;       // otherwise false if not handled
+            }
+        });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(++check > 1) {
+            String spinnerLabel = parent.getItemAtPosition(position).toString();
+            showToast(spinnerLabel);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
     public void radioButtonClicked(View view) {
@@ -72,16 +105,13 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(++check > 1) {
-            String spinnerLabel = parent.getItemAtPosition(position).toString();
-            showToast(spinnerLabel);
-        }
+    // method to send implicit for open an phone application to dial number
+    private void dialNumber() {
+        String phone_number = edtPhoneText.getText().toString();
+        Uri uri = Uri.parse("tel:"+phone_number);
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(uri);
+        startActivity(intent);
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }
